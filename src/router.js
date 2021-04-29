@@ -5,18 +5,13 @@ import About from "./views/About";
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-    mode: "history",
-    routes: [
-        {path: "/",
-        component: Home},
+let routes = [
+    {path: "/", component: Home},
+    {path: "/About", component: About}
+]
 
-        {path: "/Home",
-            component: Home},
-
-        {path: "/About",
-            component: About},
-
-
-    ]
+export const router = new VueRouter({
+    base: 'public',
+    mode: 'history',
+    routes
 })
